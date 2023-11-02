@@ -1,0 +1,56 @@
+{% include 'base.html' %}
+{% block content %}
+  <div class>
+    <h2></h2>
+    <div class="container" style="padding-top: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+              <h2>New Page Content</h2>
+
+          <form action="/submit_form" method="post" enctype="multipart/form-data" class="form-container">
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" name="name" >
+            </div>
+
+            <!-- ID -->
+            <div class="form-group">
+              <label for="id">ID:</label>
+              <input type="text" class="form-control" id="id" name="id" >
+            </div>
+
+            <!-- Site -->
+            <div class="form-group">
+              <label for="site">Site:</label>
+              <input type="text" class="form-control" id="site" name="site" >
+            </div>
+
+            <!-- Grade -->
+            <div class="form-group">
+              <label for="grade">Grade:</label>
+              <input type="text" class="form-control" id="grade" name="grade" >
+            </div>
+
+            <div class="form-group">
+              <label for="detection_type">Select Detection Type:</label>
+              <select class="form-control" id="detection_type" name="detection_type">
+                  <option value="keratin_pearls">Keratin Pearls</option>
+                  <option value="multiple_nucleoli">Multiple Nucleoli</option>
+                  <option value="classification">Classification</option>
+              </select>
+          </div>
+
+            <!-- Image Upload -->
+            <div class="form-group">
+              <label for="image">Upload Image: </label>
+              <input type="file" class="form-control-file" id="image" name="image" accept="image/*" multiple>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
